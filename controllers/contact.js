@@ -1,5 +1,16 @@
 const nodemailer = require('nodemailer')
 
+/**
+ * [sendMessage Medthod]
+ * @param  {[type]} req                       [req obj which has all submited data]
+ * @param  {[type]} res                       [a res obj could be status etc]
+ * @param  {String} [host='smtp.mailtrap.io'] [host]
+ * @param  {String} [from='iwcw4i@gmail.com'] [from]
+ * @param  {String} [to='iwcw4i@gmail.com']   [to]
+ * @param  {String} [subject='Hello           ✔']           [subject]
+ * @param  {String} [text='hello              world         !']           [text]
+ * @return {[type]}                           [description]
+ */
 var sendMessage = (req, res, host = 'smtp.mailtrap.io', from = 'iwcw4i@gmail.com', to = 'iwcw4i@gmail.com',
   subject = 'Hello ✔', text = 'hello world !') => {
   const output = `
