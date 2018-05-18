@@ -36,30 +36,35 @@ npm run dev
 ## Components Structure
 
 - app
-    ------ models
-    ---------- user.js  <!-- our user model -->
-    - config
-    ------ index.js  <!-- will hold our database connection settings -->
-    ------ passport.js  <!-- configuring the strategies for passport -->
-    - libs
-    ------ auth.js  <!-- will hold middlewares for guest and authenctaed -->
-    ------ db-connection.js  <!-- configuring db connection -->
-    - routes
-    ------ index.js      <!-- will hold all the routes with some login for notification-->
-    ------ user.js      <!-- will hold user routes -->
-    - public
-    ------ css      <!-- css-->
-    ------ client      <!-- will hold notification controll -->
-    --------- client.js      <!-- will  Register serviceWorker, Register Push browser api, send push notification -->
-    --------- worker.js      <!-- waitinig for event push to assign values on the fly -->
-    --------- html.html      <!-- show notification simple text -->
-    - views
-    ------ index.ejs    <!-- show our home page with login links -->
-    ------ login.ejs    <!-- show our login form -->
-    ------ signup.ejs   <!-- show our signup form -->
-    ------ profile.ejs  <!-- after a user logs in, they will see their profile -->
-    - package.json      <!-- handle our npm packages -->
-    - server.js         <!-- setup our application -->
+  - models
+    - user.js  <!-- our user model -->
+  - config
+    - index.js  <!-- will hold our database connection settings -->
+    - passport.js  <!-- configuring the strategies for passport -->
+  - libs
+    - auth.js  <!-- will hold middlewares for guest and authenctaed -->
+    - db-connection.js  <!-- configuring db connection -->
+  - routes
+    - index.js      <!-- will hold all the routes with some login for notification-->
+    - user.js      <!-- will hold user routes -->
+  - public
+    - css      <!-- css-->
+    - client      <!-- will hold notification controll -->
+      - client.js      <!-- will  Register serviceWorker, Register Push browser api, send push notification -->
+      - worker.js      <!-- waitinig for event push to assign values on the fly -->
+      - html.html      <!-- show notification simple text -->
+  - views
+    - index.ejs    <!-- show our home page with login links -->
+    - contact.ejs    <!-- show our login form -->
+    - auth   <!-- auth vieews folder -->
+      - login.ejs   <!-- show our login form -->
+      - register.ejs   <!-- show our signup form -->
+      - secret.ejs   <!-- show after login page -->
+    - partials  <!-- layout partials -->
+      - footer.ejs   <!-- footer section -->
+      - header.ejs   <!-- header section -->
+  - package.json      <!-- handle our npm packages -->
+  - app.js         <!-- Do the magic -- setup our application -->
 
 
 
