@@ -38,6 +38,11 @@ npm run dev
 - app
   - models
     - user.js  --# our user model #--
+
+  - Controllers
+    - user.js  --# will register and login user // action methods #--
+    - contact.js  --# will send mail // action method #--    
+
   - config
     - index.js  --# will hold our database connection settings #--
     - passport.js  --# configuring the strategies for passport #--
