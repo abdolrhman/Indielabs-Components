@@ -7,6 +7,8 @@ const MongoStore = require('connect-mongo')(session)
 const passport = require('passport')
 const bodyParser = require('body-parser')
 const path = require('path')
+const webpush = require('web-push')
+
 // my vars
 const port = process.env.PORT || 3000
 const {MONGO_URL} = require('./config/')
@@ -16,6 +18,21 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 // static files
 app.use(express.static(path.join(__dirname, '/public')))
+app.use(express.static(path.join(__dirname, '/public/client')))
+
+/** Keys For pushNotification **/
+const publicVapidKey =
+  'BJthRQ5myDgc7OSXzPCMftGw-n16F7zQBEN7EUD6XxcfTTvrLGWSIG7y_JxiWtVlCFua0S8MTB5rPziBqNx1qIo'
+const privateVapidKey = '3KzvKasA2SoCxsp0iIG_o9B0Ozvl1XDwI63JRKNIWBM'
+
+webpush.setVapidDetails(
+  'mailto:test@test.com',
+  publicVapidKey,
+  privateVapidKey
+)
+// ************ //
+
+/** set session **/
 app.use(session({
   secret: 'abc123',
   resave: true,

@@ -45,7 +45,7 @@ var sendMessage = (req, res, host = 'smtp.mailtrap.io', from = 'iwcw4i@gmail.com
       console.log('Message sent: %s', info.messageId)
       console.log('message send to : %s', JSON.stringify(info))
       console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info))
-      res.render('index', {msg: 'Email is sent'})
+      res.render('contact', {msg: 'Email is sent'})
     })
   })
 }
