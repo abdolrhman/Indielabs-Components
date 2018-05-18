@@ -1,6 +1,7 @@
 const nodemailer = require('nodemailer')
 
-var sendMessage = (req, res) => {
+var sendMessage = (req, res, host = 'smtp.mailtrap.io', from = 'iwcw4i@gmail.com', to = 'iwcw4i@gmail.com',
+  subject = 'Hello ✔', text = 'hello world !') => {
   const output = `
   <p>You have a new contact request</p>
   <h3>Contact Details</h3>
@@ -18,7 +19,7 @@ var sendMessage = (req, res) => {
     }
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-      host: 'smtp.mailtrap.io',
+      host: host,
       port: 465,
       secure: false, // true for 465, false for other ports
       auth: {
@@ -29,10 +30,10 @@ var sendMessage = (req, res) => {
 
     // setup email data with unicode symbols
     let mailOptions = {
-      from: '"Fred Foo 👻" <iwcw4i@gmail.com>', // sender address
-      to: 'iwcw4i@gmail.com, baz@example.com', // list of receivers
-      subject: 'Hello ✔', // Subject line
-      text: 'Hello world?', // plain text body
+      from: `"Fred Foo 👻" <${from}>`, // sender address
+      to: `${to}, baz@example.com`, // list of receivers
+      subject: subject, // Subject line
+      text: text, // plain text body
       html: output // html body
     }
 
