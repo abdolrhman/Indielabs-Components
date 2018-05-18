@@ -69,9 +69,9 @@ npm run dev
 
 ## Components Resulets
 
-![Image of notification1](https://imgur.com/AIaEUe1)
-![Image of mail](https://imgur.com/SMqHgvj)
-![Image of mail2](https://imgur.com/kdLDRHc)
+![Image of notification1](https://imgur.com/AIaEUe1.png)
+![Image of mail](https://imgur.com/SMqHgvj.png)
+![Image of mail2](https://imgur.com/kdLDRHc.png)
 
 
 ## Author
