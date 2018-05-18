@@ -35,9 +35,9 @@ npm run dev
 
 ## Test system using this routes
 
-> /  ... root for notification test.
-> /auth ... for auth page which will lead to login and register.
-> /contact ... for contacus form.
+> /  ... root for notification test<br/>
+> /auth ... for auth page which will lead to login and register<br/>
+> /contact ... for contacus form<br/>
 
 
 ## Components Structure
