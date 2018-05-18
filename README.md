@@ -67,6 +67,12 @@ npm run dev
   - app.js         --# Do the magic -- setup our application #--
 
 
+## Components Resulets
+
+![Image of notification1](https://imgur.com/AIaEUe1)
+![Image of mail](https://imgur.com/SMqHgvj)
+![Image of mail2](https://imgur.com/kdLDRHc)
+
 
 ## Author
 
