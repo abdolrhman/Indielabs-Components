@@ -1,4 +1,4 @@
-# Indielabs Components
+# Startup Components
 
 The idea is that you can download this project to use and adapt it for any project in node.js with:-
 * Auth(Login and Register) Component.
@@ -100,4 +100,4 @@ npm run dev
 ## Why
 
 * Creating Components so that it be easy to integrate it with an App
-* For .. Indielabs
+* For .. Startup project
